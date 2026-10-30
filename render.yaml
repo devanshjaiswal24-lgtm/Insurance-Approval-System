@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: insurexplain
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: INSUREXPLAIN_DATA_SOURCE
+        value: analytics_vidhya

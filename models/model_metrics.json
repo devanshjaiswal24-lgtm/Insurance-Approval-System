@@ -1,0 +1,230 @@
+{
+  "selected_model": "Gradient Boosting",
+  "decision_threshold": 0.08577538248638089,
+  "risk_thresholds": {
+    "low_below": 0.05,
+    "high_from": 0.15
+  },
+  "seed": 42,
+  "data_note": "Trained on the Analytics Vidhya vehicle-insurance claim dataset.",
+  "dataset": {
+    "records_raw": 58592,
+    "records_clean": 58592,
+    "duplicates_removed": 0,
+    "columns": 44,
+    "claim_rate": 0.06396777717094485,
+    "missing_values": {},
+    "train_size": 46873,
+    "test_size": 11719,
+    "split": "80/20 stratified; 5-fold stratified CV on train for tuning & threshold",
+    "features": [
+      "policy_tenure",
+      "age_of_car",
+      "age_of_policyholder",
+      "population_density",
+      "make",
+      "airbags",
+      "displacement",
+      "cylinder",
+      "gear_box",
+      "turning_radius",
+      "length",
+      "width",
+      "height",
+      "gross_weight",
+      "ncap_rating",
+      "area_cluster",
+      "segment",
+      "model",
+      "fuel_type",
+      "max_torque",
+      "max_power",
+      "engine_type",
+      "is_esc",
+      "is_adjustable_steering",
+      "is_tpms",
+      "is_parking_sensors",
+      "is_parking_camera",
+      "rear_brakes_type",
+      "transmission_type",
+      "steering_type",
+      "is_front_fog_lights",
+      "is_rear_window_wiper",
+      "is_rear_window_washer",
+      "is_rear_window_defogger",
+      "is_brake_assist",
+      "is_power_door_locks",
+      "is_central_locking",
+      "is_power_steering",
+      "is_driver_seat_height_adjustable",
+      "is_day_night_rear_view_mirror",
+      "is_ecw",
+      "is_speed_alert"
+    ],
+    "audit_only": []
+  },
+  "test_metrics": {
+    "model": "Gradient Boosting",
+    "threshold": 0.08577538248638089,
+    "accuracy": 0.7358136359757659,
+    "precision": 0.10742971887550201,
+    "recall": 0.428,
+    "f1": 0.17174959871589085,
+    "roc_auc": 0.647753487100009,
+    "pr_auc": 0.10866724706582631,
+    "brier": 0.05898058874577914,
+    "confusion_matrix": [
+      [
+        8302,
+        2667
+      ],
+      [
+        429,
+        321
+      ]
+    ]
+  },
+  "majority_class_accuracy": 0.9360013653042069,
+  "model_comparison": [
+    {
+      "model": "Logistic Regression (baseline)",
+      "threshold": 0.07776852956953723,
+      "accuracy": 0.7019370253434594,
+      "precision": 0.0885088508850885,
+      "recall": 0.3933333333333333,
+      "f1": 0.14450159196669116,
+      "roc_auc": 0.5880865469353025,
+      "pr_auc": 0.08580266967618536,
+      "brier": 0.05959719267008376,
+      "confusion_matrix": [
+        [
+          7931,
+          3038
+        ],
+        [
+          455,
+          295
+        ]
+      ]
+    },
+    {
+      "model": "Random Forest",
+      "threshold": 0.0768212005751665,
+      "accuracy": 0.7318883863810905,
+      "precision": 0.10735390676296783,
+      "recall": 0.436,
+      "f1": 0.17228661749209695,
+      "roc_auc": 0.6505834624851855,
+      "pr_auc": 0.10855954583533042,
+      "brier": 0.05907015949807747,
+      "confusion_matrix": [
+        [
+          8250,
+          2719
+        ],
+        [
+          423,
+          327
+        ]
+      ]
+    },
+    {
+      "model": "Gradient Boosting",
+      "threshold": 0.08577538248638089,
+      "accuracy": 0.7358136359757659,
+      "precision": 0.10742971887550201,
+      "recall": 0.428,
+      "f1": 0.17174959871589085,
+      "roc_auc": 0.647753487100009,
+      "pr_auc": 0.10866724706582631,
+      "brier": 0.05898058874577914,
+      "confusion_matrix": [
+        [
+          8302,
+          2667
+        ],
+        [
+          429,
+          321
+        ]
+      ]
+    }
+  ],
+  "cv_results": [
+    {
+      "model": "Logistic Regression (baseline)",
+      "cv_roc_auc": 0.6103745234143009,
+      "best_params": {
+        "clf__C": 0.1
+      }
+    },
+    {
+      "model": "Random Forest",
+      "cv_roc_auc": 0.6417431087266368,
+      "best_params": {
+        "clf__max_depth": 8,
+        "clf__min_samples_leaf": 10,
+        "clf__n_estimators": 150
+      }
+    },
+    {
+      "model": "Gradient Boosting",
+      "cv_roc_auc": 0.6480715777324347,
+      "best_params": {
+        "clf__learning_rate": 0.05,
+        "clf__max_depth": 2,
+        "clf__n_estimators": 100,
+        "clf__subsample": 0.8
+      }
+    }
+  ],
+  "calibration": {
+    "observed": [
+      0.016359918200409,
+      0.034859876965140126,
+      0.04833219877467665,
+      0.05817932922655715,
+      0.06557377049180328,
+      0.07303754266211604,
+      0.08825526137135098,
+      0.1276595744680851
+    ],
+    "predicted": [
+      0.026566886020956342,
+      0.034211624413261525,
+      0.045261787587315735,
+      0.05826754201181589,
+      0.0711047572778756,
+      0.08152082370800882,
+      0.0902036896387157,
+      0.10315520715442461
+    ]
+  },
+  "classification_report": {
+    "No claim": {
+      "precision": 0.9508647348528233,
+      "recall": 0.7568602425015954,
+      "f1-score": 0.8428426395939086,
+      "support": 10969.0
+    },
+    "Claim": {
+      "precision": 0.10742971887550201,
+      "recall": 0.428,
+      "f1-score": 0.17174959871589085,
+      "support": 750.0
+    },
+    "accuracy": 0.7358136359757659,
+    "macro avg": {
+      "precision": 0.5291472268641626,
+      "recall": 0.5924301212507977,
+      "f1-score": 0.5072961191548997,
+      "support": 11719.0
+    },
+    "weighted avg": {
+      "precision": 0.8968860453756501,
+      "recall": 0.7358136359757659,
+      "f1-score": 0.7998936012238673,
+      "support": 11719.0
+    }
+  }
+}

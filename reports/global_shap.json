@@ -1,0 +1,418 @@
+{
+  "unit": "log-odds",
+  "n_samples": 1500,
+  "importance": {
+    "policy_tenure": 0.35586984366818303,
+    "age_of_car": 0.13028911551489927,
+    "population_density": 0.02301298842727594,
+    "cylinder": 0.022606824425366597,
+    "age_of_policyholder": 0.01951498931430083,
+    "area_cluster": 0.015813231999781383,
+    "segment": 0.011437707595469561,
+    "gross_weight": 0.00896165893726035,
+    "is_adjustable_steering": 0.007537090734200503,
+    "displacement": 0.005183651842993315,
+    "height": 0.005154803585740357,
+    "max_torque": 0.005097387346429196,
+    "max_power": 0.0035594416419302208,
+    "model": 0.0021742695293987015,
+    "steering_type": 0.002116945547287208,
+    "ncap_rating": 0.00205957077566505,
+    "engine_type": 0.0010250004555667632,
+    "airbags": 0.0,
+    "turning_radius": 0.0,
+    "gear_box": 0.0,
+    "make": 0.0,
+    "width": 0.0,
+    "fuel_type": 0.0,
+    "is_esc": 0.0,
+    "is_tpms": 0.0,
+    "length": 0.0,
+    "is_parking_sensors": 0.0,
+    "is_parking_camera": 0.0,
+    "rear_brakes_type": 0.0,
+    "transmission_type": 0.0,
+    "is_front_fog_lights": 0.0,
+    "is_rear_window_wiper": 0.0,
+    "is_rear_window_washer": 0.0,
+    "is_rear_window_defogger": 0.0,
+    "is_brake_assist": 0.0,
+    "is_power_door_locks": 0.0,
+    "is_central_locking": 0.0,
+    "is_power_steering": 0.0,
+    "is_driver_seat_height_adjustable": 0.0,
+    "is_day_night_rear_view_mirror": 0.0,
+    "is_ecw": 0.0,
+    "is_speed_alert": 0.0
+  },
+  "labels": {
+    "policy_tenure": "Policy Tenure",
+    "age_of_car": "Age Of Car",
+    "age_of_policyholder": "Age Of Policyholder",
+    "population_density": "Population Density",
+    "make": "Make",
+    "airbags": "Airbags",
+    "displacement": "Displacement",
+    "cylinder": "Cylinder",
+    "gear_box": "Gear Box",
+    "turning_radius": "Turning Radius",
+    "length": "Length",
+    "width": "Width",
+    "height": "Height",
+    "gross_weight": "Gross Weight",
+    "ncap_rating": "Ncap Rating",
+    "area_cluster": "Area Cluster",
+    "segment": "Segment",
+    "model": "Model",
+    "fuel_type": "Fuel Type",
+    "max_torque": "Max Torque",
+    "max_power": "Max Power",
+    "engine_type": "Engine Type",
+    "is_esc": "Is Esc",
+    "is_adjustable_steering": "Is Adjustable Steering",
+    "is_tpms": "Is Tpms",
+    "is_parking_sensors": "Is Parking Sensors",
+    "is_parking_camera": "Is Parking Camera",
+    "rear_brakes_type": "Rear Brakes Type",
+    "transmission_type": "Transmission Type",
+    "steering_type": "Steering Type",
+    "is_front_fog_lights": "Is Front Fog Lights",
+    "is_rear_window_wiper": "Is Rear Window Wiper",
+    "is_rear_window_washer": "Is Rear Window Washer",
+    "is_rear_window_defogger": "Is Rear Window Defogger",
+    "is_brake_assist": "Is Brake Assist",
+    "is_power_door_locks": "Is Power Door Locks",
+    "is_central_locking": "Is Central Locking",
+    "is_power_steering": "Is Power Steering",
+    "is_driver_seat_height_adjustable": "Is Driver Seat Height Adjustable",
+    "is_day_night_rear_view_mirror": "Is Day Night Rear View Mirror",
+    "is_ecw": "Is Ecw",
+    "is_speed_alert": "Is Speed Alert"
+  },
+  "direction": {
+    "policy_tenure": {
+      "type": "numeric",
+      "correlation": 0.9413176578717123,
+      "summary": "Higher values tend to INCREASE predicted risk"
+    },
+    "age_of_car": {
+      "type": "numeric",
+      "correlation": -0.5570772742693444,
+      "summary": "Higher values tend to DECREASE predicted risk"
+    },
+    "age_of_policyholder": {
+      "type": "numeric",
+      "correlation": 0.7257264318315366,
+      "summary": "Higher values tend to INCREASE predicted risk"
+    },
+    "population_density": {
+      "type": "numeric",
+      "correlation": -0.862964666863051,
+      "summary": "Higher values tend to DECREASE predicted risk"
+    },
+    "make": {
+      "type": "numeric",
+      "correlation": 0.0,
+      "summary": "No consistent direction for predicted risk"
+    },
+    "airbags": {
+      "type": "numeric",
+      "correlation": 0.0,
+      "summary": "No consistent direction for predicted risk"
+    },
+    "displacement": {
+      "type": "numeric",
+      "correlation": 0.7809686397263321,
+      "summary": "Higher values tend to INCREASE predicted risk"
+    },
+    "cylinder": {
+      "type": "numeric",
+      "correlation": 0.9763087079089556,
+      "summary": "Higher values tend to INCREASE predicted risk"
+    },
+    "gear_box": {
+      "type": "numeric",
+      "correlation": 0.0,
+      "summary": "No consistent direction for predicted risk"
+    },
+    "turning_radius": {
+      "type": "numeric",
+      "correlation": 0.0,
+      "summary": "No consistent direction for predicted risk"
+    },
+    "length": {
+      "type": "numeric",
+      "correlation": 0.0,
+      "summary": "No consistent direction for predicted risk"
+    },
+    "width": {
+      "type": "numeric",
+      "correlation": 0.0,
+      "summary": "No consistent direction for predicted risk"
+    },
+    "height": {
+      "type": "numeric",
+      "correlation": 0.5899322455046607,
+      "summary": "Higher values tend to INCREASE predicted risk"
+    },
+    "gross_weight": {
+      "type": "numeric",
+      "correlation": 0.07107730490685159,
+      "summary": "No consistent direction for predicted risk"
+    },
+    "ncap_rating": {
+      "type": "numeric",
+      "correlation": -0.6350959660176435,
+      "summary": "Higher values tend to DECREASE predicted risk"
+    },
+    "area_cluster": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "C1": -0.010627983851554666,
+        "C10": -0.010081151681457555,
+        "C11": -0.019156292164892227,
+        "C12": -0.023728969083119722,
+        "C13": -0.010399710332223245,
+        "C14": -0.009983532008680822,
+        "C15": -0.011308171614388485,
+        "C16": -0.010630151565088015,
+        "C17": -0.010983172759759616,
+        "C18": 0.361441877652972,
+        "C19": -0.01023893185726463,
+        "C2": 0.0056635582628136805,
+        "C20": -0.009283018864076176,
+        "C21": 0.024632157894842677,
+        "C22": -0.010131379114580208,
+        "C3": 0.05783432432989143,
+        "C4": -0.010657703607329141,
+        "C5": -0.009880376634156664,
+        "C6": -0.00785257887585092,
+        "C7": -0.010839042394482716,
+        "C8": -0.007913805464272469,
+        "C9": -0.010226596320026924
+      }
+    },
+    "segment": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "A": -0.013659178873952776,
+        "B1": -0.002846852452685115,
+        "B2": 0.017250982036620458,
+        "C1": -0.0030645232684942013,
+        "C2": -0.0026217052010904067,
+        "Utility": -0.0018898754316242722
+      }
+    },
+    "model": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "M1": 0.002486177150526023,
+        "M10": -0.0029811444918338738,
+        "M11": -0.0012913995756643026,
+        "M2": 0.0015640122496179548,
+        "M3": -0.001968276561766968,
+        "M4": -0.0021742218510294006,
+        "M5": -0.0025848799480742727,
+        "M6": -0.001989777271492117,
+        "M7": -0.002062687313812346,
+        "M8": -0.00185050926780422,
+        "M9": -0.0017980603192580004
+      }
+    },
+    "fuel_type": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "CNG": 0.0,
+        "Diesel": 0.0,
+        "Petrol": 0.0
+      }
+    },
+    "max_torque": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "113Nm@4400rpm": -0.004349188456335488,
+        "170Nm@4000rpm": -0.00442576132840166,
+        "200Nm@1750rpm": -0.0038668722634646255,
+        "200Nm@3000rpm": 0.010988214180142656,
+        "250Nm@2750rpm": -0.004287748076725512,
+        "60Nm@3500rpm": 0.006269142154630425,
+        "82.1Nm@3400rpm": -0.004191869557944804,
+        "85Nm@3000rpm": -0.005522039279510559,
+        "91Nm@4250rpm": -0.004333184435154784
+      }
+    },
+    "max_power": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "113.45bhp@4000rpm": 7.052575927600191e-05,
+        "118.36bhp@5500rpm": 0.001163892191707834,
+        "40.36bhp@6000rpm": -0.005609003278921548,
+        "55.92bhp@5300rpm": 0.0004532040106271431,
+        "61.68bhp@6000rpm": -0.0010099775386566323,
+        "67.06bhp@5500rpm": 0.0003365238614944925,
+        "88.50bhp@6000rpm": 0.00033342510370343125,
+        "88.77bhp@4000rpm": -0.00045697558970426793,
+        "97.89bhp@3600rpm": 0.0006123133048989396
+      }
+    },
+    "engine_type": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "1.0 SCe": -0.0005120845360578848,
+        "1.2 L K Series Engine": -0.0005018574773237556,
+        "1.2 L K12N Dualjet": 0.005126130886736253,
+        "1.5 L U2 CRDi": -0.0004741449099406389,
+        "1.5 Turbocharged Revotorq": 0.013671542017290884,
+        "1.5 Turbocharged Revotron": -0.00045940186550056517,
+        "F8D Petrol Engine": -0.0004005370561005011,
+        "G12B": -0.00041381231404611344,
+        "K Series Dual jet": -0.000489310112114399,
+        "K10C": -0.00043783773556177366,
+        "i-DTEC": -0.0005442087910161043
+      }
+    },
+    "is_esc": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_adjustable_steering": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": -0.008056429668654535,
+        "Yes": 0.005891932091895108
+      }
+    },
+    "is_tpms": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_parking_sensors": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_parking_camera": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "rear_brakes_type": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "Disc": 0.0,
+        "Drum": 0.0
+      }
+    },
+    "transmission_type": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "Automatic": 0.0,
+        "Manual": 0.0
+      }
+    },
+    "steering_type": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "Electric": 0.0029274182049607643,
+        "Manual": 0.003211425898521236,
+        "Power": -0.0014510745325614987
+      }
+    },
+    "is_front_fog_lights": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_rear_window_wiper": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_rear_window_washer": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_rear_window_defogger": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_brake_assist": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_power_door_locks": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_central_locking": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_power_steering": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_driver_seat_height_adjustable": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_day_night_rear_view_mirror": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_ecw": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    },
+    "is_speed_alert": {
+      "type": "categorical",
+      "mean_shap_by_level": {
+        "No": 0.0,
+        "Yes": 0.0
+      }
+    }
+  },
+  "base_value": -2.7805226672594676,
+  "note": "SHAP values describe how the MODEL uses each feature. They do not establish causation."
+}

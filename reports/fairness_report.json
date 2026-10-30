@@ -1,0 +1,45 @@
+{
+  "overall": {
+    "n": 11719,
+    "actual_claim_rate": 0.06399863469579316,
+    "mean_predicted_prob": 0.06377132999430346,
+    "predicted_positive_rate": 0.2549705606280399,
+    "tpr": 0.428,
+    "fpr": 0.2431397574984046,
+    "precision": 0.10742971887550201,
+    "recall": 0.428,
+    "actual_positives": 750,
+    "actual_negatives": 10969,
+    "ci_predicted_positive_rate": [
+      0.24716055124188752,
+      0.262941163345811
+    ],
+    "ci_tpr": [
+      0.3930437702665875,
+      0.4636900581663353
+    ],
+    "ci_fpr": [
+      0.23520256720324081,
+      0.2512568017172037
+    ],
+    "small_sample": false
+  },
+  "attributes": {},
+  "flags": [],
+  "proxy_checks": {},
+  "limitations": [
+    "Synthetic data: any disparity reflects the generator's assumptions, not real customers.",
+    "Some groups are small; confidence intervals are wide and flags on small samples are unreliable.",
+    "Predicted-positive-rate, TPR and FPR gaps cannot all be equalised at once when base rates differ (impossibility results); choosing a fairness criterion is a policy decision.",
+    "Age is a model input and a rating factor in many markets; whether that is permitted depends on jurisdiction.",
+    "Only single attributes are audited; intersectional groups (e.g. age x gender) are not.",
+    "Statistical fairness metrics alone cannot establish legal compliance or non-compliance."
+  ],
+  "mitigation": [
+    "Review flagged groups with domain experts and compliance counsel before any action.",
+    "Examine proxy features (annual mileage, vehicle type, region) and test removal or monotonic constraints.",
+    "Consider group-aware threshold review or re-weighting only where legally permitted.",
+    "Collect more data for small groups and re-run with intersectional slices.",
+    "Monitor these metrics after deployment and keep a human in the loop for adverse outcomes."
+  ]
+}

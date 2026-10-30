@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>InsureXplain — Explainable Insurance Risk Intelligence</title>
+<link rel="stylesheet" href="/static/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="brand"><b>InsureXplain</b><span>Explainable Insurance Risk Intelligence</span></div>
+  <nav aria-label="Main"><a href="#home">Dashboard</a><a href="#predict">Risk Prediction</a><a href="#xai">Explainable AI</a><a href="#notice">Explanation Report</a><a href="#fairness">Fairness</a><a href="#evaluation">Evaluation</a></nav>
+</header>
+<div id="toast" role="status" aria-live="polite"></div>
+<main id="main">
+
+<section id="home" class="page">
+  <h1>InsureXplain — Explainable Insurance Risk Intelligence</h1>
+  <p class="lead">Motor-insurance <b>claim-risk</b> prediction with SHAP and LIME explanations, plain-language reports and a fairness audit. Outputs are decision support for human reviewers — not claim adjudication, fraud detection or automatic decisions.</p>
+  <div class="banner">Demonstration only: the model is trained on the Analytics Vidhya vehicle-insurance dataset. Outputs are decision support, not automatic underwriting decisions.</div>
+  <div class="cards" id="cards"><div class="card">Loading…</div></div>
+  <div class="grid2">
+    <div class="panel"><h2>Global feature importance (SHAP)</h2><canvas id="homeImp" height="200" aria-label="Global feature importance chart" role="img"></canvas></div>
+    <div class="panel"><h2>Modules</h2><ul class="links"><li><a href="#predict">Enter customer details → risk &amp; explanation</a></li><li><a href="#xai">Global vs local SHAP and LIME</a></li><li><a href="#notice">Printable explanation report</a></li><li><a href="#fairness">Group fairness &amp; compliance dashboard</a></li><li><a href="#evaluation">Model evaluation &amp; comparison</a></li></ul>
+    <h2>Dataset</h2><div id="dsSummary" class="small"></div></div>
+  </div>
+</section>
+
+<section id="predict" class="page">
+  <h1>Insurance Risk Prediction</h1>
+  <div class="grid2">
+    <form id="form" class="panel" novalidate>
+      <div class="fields" id="fields"></div>
+      <div class="row"><button type="submit" class="btn" id="goBtn">Predict claim risk</button><button type="button" class="btn alt" id="exBtn">Load example</button></div>
+      <div id="formErr" class="err" role="alert"></div>
+    </form>
+    <div class="panel" id="result"><h2>Result</h2><p class="small">Submit the form to see the model's estimate. Nothing is shown until the backend responds.</p></div>
+  </div>
+</section>
+
+<section id="xai" class="page">
+  <h1>Explainable AI Dashboard</h1>
+  <div class="grid2">
+    <div class="panel"><h2>Global explanation <span class="tag">whole model</span></h2><p class="small">How the model uses each feature across a training sample. Importance ≠ causation.</p>
+      <canvas id="gImp" height="220" aria-label="Global importance" role="img"></canvas><div id="gDir" class="small"></div></div>
+    <div class="panel"><h2>SHAP summary plot</h2><img id="shapImg" alt="SHAP summary plot" class="full"><p class="small">Each dot is a customer; position = effect on predicted risk, colour = feature value.</p></div>
+  </div>
+  <div class="panel"><h2>Local explanation <span class="tag alt">one prediction</span></h2>
+    <div class="row"><label for="xaiSel">Prediction</label><select id="xaiSel"></select><button class="btn" id="xaiBtn">Explain (SHAP + LIME)</button></div>
+    <div id="xaiOut" class="small">Make a prediction first, then select it here.</div></div>
+</section>
+
+<section id="notice" class="page">
+  <h1>Adverse Action Explanation (illustrative)</h1>
+  <div class="panel"><div class="row"><label for="ntSel">Prediction</label><select id="ntSel"></select><button class="btn" id="ntBtn">Generate report</button></div></div>
+  <div class="panel" id="ntOut"><p class="small">Select a prediction to generate its explanation.</p></div>
+</section>
+
+<section id="fairness" class="page">
+  <h1>Fairness &amp; Compliance Dashboard</h1><div id="fairOut"><div class="panel">Loading…</div></div>
+</section>
+
+<section id="evaluation" class="page">
+  <h1>Model Evaluation</h1><div id="evalOut"><div class="panel">Loading…</div></div>
+</section>
+</main>
+<footer>InsureXplain — academic project · Analytics Vidhya dataset · not legal or underwriting advice</footer>
+<script src="/static/app.js"></script>
+</body></html>
